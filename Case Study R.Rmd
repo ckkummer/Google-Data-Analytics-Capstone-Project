@@ -78,10 +78,6 @@ cyclistic_2023_R <- cyclistic_2023_R %>%
   filter(ride_length>0) %>%
   select(-c(ride_id,start_station_id,end_station_id,start_lat,start_lng,end_lat,end_lng))
   
-#: How do annual members and casual riders use Cyclistic bikes differently?
-#Members vs Casual riders:
-  #YEAR: time of day vs count, time of day vs duration,
-
 ggplot(cyclistic_2023_R, mapping = aes(x = time_of_day, fill = member_casual))+
   geom_bar(position = "dodge", color = "black", show.legend = TRUE)+
   labs(title = "Member vs Casual Rider Count Per Time of Day (2023)",
