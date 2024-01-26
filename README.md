@@ -7,8 +7,9 @@ Google Data Analytics Professional Certificate Capstone Project
 1. [Introduction](README.md#introduction)
 2. [Business Task](README.md#business-task)
 3. [Data](README.md#data)
-4. [Processing, Cleaning, Analysis and Viz: R Studio Code](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
-6. [Preparing and Cleaning For Tableau- R Code](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
+4. [Processing, Cleaning, Analysis and Viz Code: R Studio](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
+5. [R Studio Viz]
+6. [Preparing and Cleaning For Tableau Code: R Studio](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
 7. [Tableau Dashboard](https://public.tableau.com/views/GoogleDataAnalyticsCapstoneDashboard/Dashboard62?:language=en-US&:display_count=n&:origin=viz_share_link)
 8. [Conclusion and Recommendations](README.md#conclusions)
 
@@ -53,3 +54,5 @@ In order to design marketing strategies aimed at converting casual riders into a
 
 * **Date Range** : January 2023 - December 2023
 * **Data Attributes** : ride_id,	rideable_type,	started_at,	ended_at,	start_station_name,	start_station_id,	end_station_name,	end_station_id,	start_lat,	start_lng,	end_lat,	end_lng,	member_casual
+
+
