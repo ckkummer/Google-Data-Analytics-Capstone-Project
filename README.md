@@ -7,9 +7,10 @@ Google Data Analytics Professional Certificate Capstone Project
 1. [Introduction](README.md#introduction)
 2. [Business Task](README.md#business-task)
 3. [Data](README.md#data)
-4. [Processing, Cleaning, Analysis and Viz: R Studio](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
-6. [Analysis and Viz](README.md#analysis-and-viz)
-7. [Conclusion and Recommendations](README.md#conclusions)
+4. [Processing, Cleaning, Analysis and Viz: R Studio Code](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
+6. [Preparing and Cleaning For Tableau- R Code](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
+7. [Tableau Dashboard](https://public.tableau.com/views/GoogleDataAnalyticsCapstoneDashboard/Dashboard62?:language=en-US&:display_count=n&:origin=viz_share_link)
+8. [Conclusion and Recommendations](README.md#conclusions)
 
 ## Introduction
 
