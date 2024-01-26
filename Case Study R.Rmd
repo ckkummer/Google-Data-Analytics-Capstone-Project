@@ -1,0 +1,157 @@
+---
+title: "Case Study R"
+output: html_document
+date: "2024-01-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+#Install Packages
+install.packages('tidyverse')
+install.packages('janitor')
+install.packages('lubridate')
+install.packages('dplyr')
+
+#Loading the packages
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(dplyr)
+
+#Import CSV Data using read_csv
+Jan.23 = read_csv(file="cyclistic_raw_data_2023_01.csv", col_names = TRUE)
+Feb.23 = read_csv(file="cyclistic_raw_data_2023_02.csv", col_names = TRUE)
+Mar.23 = read_csv(file="cyclistic_raw_data_2023_03.csv", col_names = TRUE)
+Apr.23 = read_csv(file="cyclistic_raw_data_2023_04.csv", col_names = TRUE)
+May.23 = read_csv(file="cyclistic_raw_data_2023_05.csv", col_names = TRUE)
+Jun.23 = read_csv(file="cyclistic_raw_data_2023_06.csv", col_names = TRUE)
+Jul.23 = read_csv(file="cyclistic_raw_data_2023_07.csv", col_names = TRUE)
+Aug.23 = read_csv(file="cyclistic_raw_data_2023_08.csv", col_names = TRUE)
+Sep.23 = read_csv(file="cyclistic_raw_data_2023_09.csv", col_names = TRUE)
+Oct.23 = read_csv(file="cyclistic_raw_data_2023_10.csv", col_names = TRUE)
+Nov.23 = read_csv(file="cyclistic_raw_data_2023_11.csv", col_names = TRUE)
+Dec.23 = read_csv(file="cyclistic_raw_data_2023_12.csv", col_names = TRUE)
+
+#merging all 12 individual month data frames to one year view
+cyclistic_raw_data_2023 = bind_rows(Jan.23,Feb.23,Mar.23,Apr.23,May.23,Jun.23,Jul.23,Aug.23,Sep.23,Oct.23,Nov.23,Dec.23)
+
+#Creating a new data frame "cyclistic_2023_R" to clean and manipulate (create new columns) in R
+cyclistic_2023_R = cyclistic_raw_data_2023
+
+#adding a column for ride_length, calculated by the difference between started_at and ended_at
+#adding a column for trip_date, the date the trip was completed on
+#adding a column for day_of_week, the day of the week, Monday, Tuesday, Wednesday... the trip was completed on 
+#adding a column for month, the month of 2023 the trip was completed on 
+#adding a column for year, the year the trip was completed on 
+#adding a column for hour, the hour of day (AM, PM), on a 12 hour scale, the trip was completed on 
+#addding a column for seasons, the season of year the trip was completed; Winter = December, Janurary, Feburary, Spring = March, April, May, Summer = June, July, August, Autumn = September, October, November
+cyclistic_2023_R <- cyclistic_2023_R %>%
+  mutate(ride_length = round(difftime(cyclistic_2023_R$ended_at, cyclistic_2023_R$started_at, units = "mins"), digits = 1),
+         trip_date = as.Date(cyclistic_2023_R$started_at),
+         day_of_week = ordered(weekdays(cyclistic_2023_R$started_at)),
+         month = month(as.Date(cyclistic_2023_R$started_at)),
+         year = year(as.Date(cyclistic_2023_R$started_at)),
+         hour = as.numeric(format(cyclistic_2023_R$started_at,"%H")),
+         time_of_day = case_when(
+            between(hour,0,5) ~ "Night",
+            between(hour,6,11) ~ "Morning",
+            between(hour,12,17) ~ "Afternoon",
+            between(hour,18,23) ~"Evening",
+            TRUE ~ NA_character_
+            ),
+         season = case_when(
+           month %in% c(12,01,02) ~ "Winter",
+           month %in% c(03,04,05) ~ "Spring",
+           month %in% c(06,07,08) ~ "Summer",
+           month %in% c(09,10,11) ~ "Autumn"
+           )
+           )
+
+#cleaning data 
+cyclistic_2023_R <- cyclistic_2023_R %>%
+  na.omit() %>%
+  distinct() %>%
+  filter(ride_length>0) %>%
+  select(-c(ride_id,start_station_id,end_station_id,start_lat,start_lng,end_lat,end_lng))
+  
+#: How do annual members and casual riders use Cyclistic bikes differently?
+#Members vs Casual riders:
+  #YEAR: time of day vs count, time of day vs duration,
+
+ggplot(cyclistic_2023_R, mapping = aes(x = time_of_day, fill = member_casual))+
+  geom_bar(position = "dodge", color = "black", show.legend = TRUE)+
+  labs(title = "Member vs Casual Rider Count Per Time of Day (2023)",
+       fill = "Rider Type",
+       x = "Time of Day",
+       y = "Rider Count")+
+  theme_bw()
+
+####REORDER
+ggplot(cyclistic_2023_R, mapping = aes(x = ordered(day_of_week), fill = member_casual))+
+   geom_bar(position = "dodge", color = "black", show.legend = TRUE) +
+  labs(title="Member vs Casual Rider Count Per Day of Week (2023)",
+       fill = "Rider Type ",
+       x="Day of Week",
+       y = "Rider Count")+
+  theme_bw()+
+scale_y_continuous(labels=scales::comma_format() )
+
+ggplot(cyclistic_2023_R, mapping = aes(x = month, fill = member_casual))+
+  geom_bar(position = "dodge", color = "black", show.legend = TRUE)+
+  labs(title = "Member vs Casual Rider Count Per Month of Year (2023)",
+       fill = "Rider Type",
+       x = "Month of 2023",
+       y = "Rider Count")+
+  theme_bw()+
+scale_x_continuous(breaks=1:12, labels = month.abb)+
+scale_y_continuous(labels=scales::comma_format() )
+
+ggplot(cyclistic_2023_R, mapping = aes(x = season, fill = member_casual))+
+  geom_bar(position = "dodge",color = "black", show.legend = TRUE)+
+  labs(title = "Member vs Casual Rider Count Per Season (2023)",
+       fill = "Rider Type",
+       x = "Season",
+       y = "Rider Count")+
+  theme_bw()
+
+ggplot(cyclistic_2023_R, mapping = aes(x = time_of_day, y = ride_length, fill = member_casual))+
+  geom_bar(stat = "summary", fun = "mean", position = "dodge",color = "black", show.legend = TRUE)+
+  labs(title = "Member vs Casual Average Ride Length Per Time of Day (2023)",
+       fill = "Rider Type",
+       x = "Time of Day",
+       y = "Average Ride Length in Minutes")+
+  theme_bw()+
+  scale_y_continuous(labels=scales::comma_format())
+
+ggplot(cyclistic_2023_R, mapping = aes(x = day_of_week, y = ride_length, fill = member_casual))+
+  geom_bar(stat = "summary", fun = "mean", position = "dodge",color = "black", show.legend = TRUE)+
+  labs(title = "Member vs Casual Average Ride Length Per Day of Week (2023)",
+       fill = "Rider Type",
+       x = "Day of Week",
+       y = "Average Ride Length in Minutes")+
+  theme_bw()+
+  scale_y_continuous(labels=scales::comma_format())
+
+ggplot(cyclistic_2023_R, mapping = aes(x = month, y = ride_length ,fill = member_casual))+
+  geom_bar(stat = "summary", fun = "mean" , position = "dodge", color = "black", show.legend = TRUE)+
+  labs(title = "Member vs Casual Average Ride Length Per Month of Year (2023)",
+       x = "Month of 2023",
+       y = "Average Ride Length in Minutes")+
+  theme_bw()+
+  scale_x_continuous(breaks = 1:12, labels = month.abb)+
+  scale_y_continuous(labels=scales::comma_format())
+
+ggplot(cyclistic_2023_R, mapping = aes(x = season, y = ride_length, fill = member_casual))+
+  geom_bar(stat = "summary", fun = "mean", position = "dodge",color = "black", show.legend = TRUE)+
+  labs(title = "Member vs Casual Average Ride Length Per Season (2023)",
+       fill = "Rider Type",
+       x = "Season",
+       y = "Average Ride Length in Minutes")+
+  theme_bw()+
+  scale_y_continuous(labels=scales::comma_format() )
+```
+
