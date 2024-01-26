@@ -1,0 +1,83 @@
+---
+title: "Case Study Tableau"
+output: html_document
+date: "2024-01-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Install Packages
+install.packages('tidyverse')
+install.packages('janitor')
+install.packages('lubridate')
+install.packages('dplyr')
+
+#Loading the packages
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(dplyr)
+
+#Import CSV Data using read_csv
+Jan.23 = read_csv(file="cyclistic_raw_data_2023_01.csv", col_names = TRUE)
+Feb.23 = read_csv(file="cyclistic_raw_data_2023_02.csv", col_names = TRUE)
+Mar.23 = read_csv(file="cyclistic_raw_data_2023_03.csv", col_names = TRUE)
+Apr.23 = read_csv(file="cyclistic_raw_data_2023_04.csv", col_names = TRUE)
+May.23 = read_csv(file="cyclistic_raw_data_2023_05.csv", col_names = TRUE)
+Jun.23 = read_csv(file="cyclistic_raw_data_2023_06.csv", col_names = TRUE)
+Jul.23 = read_csv(file="cyclistic_raw_data_2023_07.csv", col_names = TRUE)
+Aug.23 = read_csv(file="cyclistic_raw_data_2023_08.csv", col_names = TRUE)
+Sep.23 = read_csv(file="cyclistic_raw_data_2023_09.csv", col_names = TRUE)
+Oct.23 = read_csv(file="cyclistic_raw_data_2023_10.csv", col_names = TRUE)
+Nov.23 = read_csv(file="cyclistic_raw_data_2023_11.csv", col_names = TRUE)
+Dec.23 = read_csv(file="cyclistic_raw_data_2023_12.csv", col_names = TRUE)
+
+#merging all 12 individual month data frames to one year view
+cyclistic_raw_data_2023 = bind_rows(Jan.23,Feb.23,Mar.23,Apr.23,May.23,Jun.23,Jul.23,Aug.23,Sep.23,Oct.23,Nov.23,Dec.23)
+
+#Creating a new data frame "cyclistic_2023_Tableau" to clean and manipulate (create new columns) in R
+cyclistic_2023_Tableau = cyclistic_raw_data_2023
+
+#adding a column for ride_length, calculated by the difference between started_at and ended_at
+#adding a column for trip_date, the date the trip was completed on
+#adding a column for day_of_week, the day of the week, Monday, Tuesday, Wednesday... the trip was completed on 
+#adding a column for month, the month of 2023 the trip was completed on 
+#adding a column for year, the year the trip was completed on 
+#adding a column for hour, the hour of day (AM, PM), on a 12 hour scale, the trip was completed on 
+#addding a column for seasons, the season of year the trip was completed; Winter = December, Janurary, Feburary, Spring = March, April, May, Summer = June, July, August, Autumn = September, October, November
+cyclistic_2023_Tableau <- cyclistic_2023_Tableau %>%
+  mutate(ride_length = round(difftime(cyclistic_2023_Tableau$ended_at, cyclistic_2023_Tableau$started_at, units = "mins"), digits = 1),
+         trip_date = as.Date(cyclistic_2023_Tableau$started_at),
+         day_of_week = ordered(weekdays(cyclistic_2023_Tableau$started_at)),
+         month = month(as.Date(cyclistic_2023_Tableau$started_at)),
+         year = year(as.Date(cyclistic_2023_Tableau$started_at)),
+         hour = as.numeric(format(cyclistic_2023_Tableau$started_at,"%H")),
+         time_of_day = case_when(
+            between(hour,0,5) ~ "Night",
+            between(hour,6,11) ~ "Morning",
+            between(hour,12,17) ~ "Afternoon",
+            between(hour,18,23) ~"Evening",
+            TRUE ~ NA_character_
+            ),
+         season = case_when(
+           month %in% c(12,01,02) ~ "Winter",
+           month %in% c(03,04,05) ~ "Spring",
+           month %in% c(06,07,08) ~ "Summer",
+           month %in% c(09,10,11) ~ "Autumn"
+           )
+           )
+
+#cleaning data 
+cyclistic_2023_Tableau <- cyclistic_2023_Tableau %>%
+  na.omit() %>%
+  distinct() %>%
+  filter(ride_length>0) %>%
+  select(-c(ride_id,start_station_id,end_station_id,start_lat,start_lng,end_lat,end_lng))
+
+#save data frame to csv. upload to Tableau
+write.csv(cyclistic_2023_Tableau, "cyclistic_2023_Tableau.csv", row.names = FALSE)
+
+```
