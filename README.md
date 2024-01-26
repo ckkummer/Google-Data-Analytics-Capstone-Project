@@ -34,7 +34,7 @@ In order to design marketing strategies aimed at converting casual riders into a
 ## Data
 
 * **Data source** :
- The data has been made available by Motivate International Inc. under this license.) 
+ The data has been made available by Motivate International Inc.
 > **[Cyclistic’s historical trip data]**
 > https://divvy-tripdata.s3.amazonaws.com/202301-divvy-tripdata.zip
 > https://divvy>tripdata.s3.amazonaws.com/202302-divvy-tripdata.zip
@@ -50,5 +50,5 @@ In order to design marketing strategies aimed at converting casual riders into a
 > https://divvy-tripdata.s3.amazonaws.com/202312-divvy-tripdata.zip
 
 
-* **Date Range** : January 2023 - December 2023 
-
+* **Date Range** : January 2023 - December 2023
+* **Data Attributes** : ride_id,	rideable_type,	started_at,	ended_at,	start_station_name,	start_station_id,	end_station_name,	end_station_id,	start_lat,	start_lng,	end_lat,	end_lng,	member_casual
