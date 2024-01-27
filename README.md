@@ -11,7 +11,7 @@ Google Data Analytics Professional Certificate Capstone Project
 5. [R Studio Viz](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/8ca062912be0fcc53cbddafca211da5549079588/Viz%20in%20R%20Studio)
 6. [Preparing and Cleaning For Tableau Code: R Studio](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
 7. [Tableau Dashboard](https://public.tableau.com/views/GoogleDataAnalyticsCapstoneDashboard/Dashboard62?:language=en-US&:display_count=n&:origin=viz_share_link)
-8. [Conclusion and Recommendations](README.md#conclusions)
+8. [Analysis and Viz](README.md#Analysis-and-Viz)
 
 ## Introduction
 
@@ -54,5 +54,49 @@ In order to design marketing strategies aimed at converting casual riders into a
 
 * **Date Range** : January 2023 - December 2023
 * **Data Attributes** : ride_id,	rideable_type,	started_at,	ended_at,	start_station_name,	start_station_id,	end_station_name,	end_station_id,	start_lat,	start_lng,	end_lat,	end_lng,	member_casual
+
+
+## Analysis and Viz
+
+The final dataset containing trip data of roughly 3.4 million ride records was analyzed. 
+Visualizations were developed in Google Data Studio to observe differential trends between the usage by casual riders and annual members.  
+
+
+### Compostion of Riders
+![Sheet 7](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/7fc603b8-19c2-4808-81db-4a65bb2835cc)
+#### **Insights**
+* 64.62% of total rides were taken by members.
+* 35.38% of total rides were taken by casual riders.
+* Long term focus: membership retention rates and maximizing the number fo members as they are responsible for a majority of the company's business.
+
+
+### Weekly distribution of number of rides
+![# Rider _ Wk day bar](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/703a323d-b0df-4e6a-baae-d62e56403851)
+![# Rider _ Wk day bar (3)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/367e3e5f-1320-4155-8520-1e4487f47542)
+#### **Insights**
+* Members tend to utlizie bikes during the weekdays Monday - Friday; rider count peaking Tuesday - Thursday
+* Roughly 50% of Casual Riders ride on the weekend, Firday - Sunday
+* These trends indicate that members are likely utiliing Cyclisitc bikes for means of commuting
+* Casual riders are likely utilizing Cyclistic bikes leisurely
+  
+
+### Weekly distribution of average ride duration
+![# Rider _ Wk day bar (2)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/a5bcceb0-6569-480a-81cf-6fab83a6e0c2)
+#### **Insights**
+* Casual riders typically ride approximately 2 times as long as members ride
+* Both causal and member riders engagge in longer rides on the weekend
+
+
+### Hourly distribution of number of rides
+![Hourly](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/1f0fa050-75f8-4467-84de-7c5be3bb08d6)
+#### **Insights**
+* 
+
+
+### Monthly distribution of number of rides 
+![Monthly](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/837a2011-6ec9-4da3-b54f-5366d7d49527)
+#### **Insights**
+*  
+
 
 
