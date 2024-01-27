@@ -72,7 +72,7 @@ Visualizations were developed in Google Data Studio to observe differential tren
 
 ### Weekly distribution of number of rides
 ![# Rider _ Wk day bar](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/703a323d-b0df-4e6a-baae-d62e56403851)
-![# Rider _ Wk day bar (3)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/367e3e5f-1320-4155-8520-1e4487f47542)
+![# Rider _ Wk day bar (5)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/93ee3f0b-f364-433e-907e-ddcb92e6adf9)
 #### **Insights**
 * Members tend to utlizie bikes during the weekdays Monday - Friday; rider count peaking Tuesday - Thursday
 * Roughly 50% of Casual Riders ride on the weekend, Firday - Sunday
