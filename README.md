@@ -18,7 +18,7 @@ Google Data Analytics Professional Certificate Capstone Project
 
 **Google Data Analytics Professional Certificate Course 8/8: Google Data Analytics Professional Certificate Capstone Project**
 
-This project requires me to act as a fictional  junior analyst working on the marketing analyst team for the fictional company, Cyclistic- a bike-share company based in Chicago. Cyclistic is a program that features more than 5,800 bicycles, 600 docking stations, and offers reclining bikes, hand tricycles, and cargo bikes.
+This project requires me to act as a fictional  junior analyst working on the marketing analyst team for the fictional company, Cyclistic- a bike-share company based in Chicago. According to the Google Certificate, Case Study 1: How does a bike-share navigaee speedy success?," Cyclistic is a program that features more than 5,800 bicycles, 600 docking stations, and offers reclining bikes, hand tricycles, and cargo bikes.
 
 Cyclistic appeals to a broad range of customers by offering flexible pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
 
