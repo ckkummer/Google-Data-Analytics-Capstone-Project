@@ -63,7 +63,7 @@ Visualizations were developed in Google Data Studio to observe differential tren
 
 
 ### Compostion of Riders
-![Sheet 7](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/7fc603b8-19c2-4808-81db-4a65bb2835cc)
+![Sheet 7 (1)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/1e7d887a-e5b7-4354-abf8-6e2d99c57b93)
 #### **Insights**
 * 64.62% of total rides were taken by members.
 * 35.38% of total rides were taken by casual riders.
