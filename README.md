@@ -18,9 +18,9 @@ Google Data Analytics Professional Certificate Capstone Project
 
 **Google Data Analytics Professional Certificate Course 8/8: Google Data Analytics Professional Certificate Capstone Project**
 
-This project requires me to act as a fictional  junior analyst working on the marketing analyst team for the fictional company, Cyclistic- a bike-share company based in Chicago. According to the Google Certificate, Case Study 1: How does a bike-share navigaee speedy success?," Cyclistic is a program that features more than 5,800 bicycles, 600 docking stations, and offers reclining bikes, hand tricycles, and cargo bikes.
+This project requires me to act as a fictional  junior analyst working on the marketing analyst team for the fictional company, Cyclistic- a bike-share company based in Chicago. According to the Google Certificate, Case Study 1: How does a bike-share navigaee speedy success?," Cyclistic is a program that features more than 5,800 bicycles, 600 docking stations, and offers reclining bikes, hand tricycles, and cargo bikes."
 
-Cyclistic appeals to a broad range of customers by offering flexible pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
+Furthermore, Google defines Cyclistic as a compant that, "appeals to a broad range of customers by offering flexible pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members."
 
 Cyclistic’s director of marketing is interested in designing marketing strategies aimed at converting casual riders into annual members. 
 
@@ -70,6 +70,14 @@ Visualizations were developed in Google Data Studio to observe differential tren
 * 35.38% of total rides were taken by casual riders.
 * Long term focus: membership retention rates and maximizing the number fo members as they are responsible for a majority of the company's business.
 
+  ### Rider Compostion Per Bike Type
+ ![M v C Bike Type Pie Chart (3)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/cd7b98c4-ccca-4137-a9ba-39d2b8e5376a)
+ #### **Insights**
+ * 0% of members opt for docked bikes
+ * classic bikes account for approximately 60% of riders
+ * limit spending cost on docked bikes, focus marketing efforts on classic and docked bikes
+ * focus efforts on maintaining classic and electric bike quality and avalibaility 
+
 
 ### Weekly distribution of number of rides
 ![# Rider _ Wk day bar](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/703a323d-b0df-4e6a-baae-d62e56403851)
@@ -95,8 +103,6 @@ Visualizations were developed in Google Data Studio to observe differential tren
 * Casual rider count increased notably throughout the day, then showed a steady decline around hour 18.
 * Members may predominantly use bikes for commuting to and from work on weekdays
 * Casul riders utilize bikes frequently throughout the day
-
-
 
 ### Monthly distribution of number of rides 
 ![Monthly](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/837a2011-6ec9-4da3-b54f-5366d7d49527)
