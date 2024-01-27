@@ -12,7 +12,7 @@ Google Data Analytics Professional Certificate Capstone Project
 6. [Preparing and Cleaning For Tableau Code: R Studio](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/blob/c1a1b58b6603b111a8dbcdfcfce1f597138ec1cb/Case%20Study%20R.Rmd)
 7. [Tableau Dashboard](https://public.tableau.com/views/GoogleDataAnalyticsCapstoneDashboard/Dashboard62?:language=en-US&:display_count=n&:origin=viz_share_link)
 8. [Analysis and Viz](README.md#Analysis-and-Viz)
-9. [Conclusions and Recommendations] 
+9. [Conclusions and Recommendations](README.md#Conclusions-and-Recommendations)
 
 ## Introduction
 
@@ -105,17 +105,17 @@ Visualizations were developed in Google Data Studio to observe differential tren
 * Number of member riders is very roughly normal- yet showing peak number of riders in August, followed by July then June
   
 
-##Conclusions and Recommendations
-**Targeted Marketing:**
+## Conclusions and Recommendations
+** Targeted Marketing:**
 * Focus marketing efforts on converting casual riders into members by emphasizing the benefits of annual membership, such as cost savings and convenience for daily commuting.
+* Focus membership promotion during peak riding months (Summer)
 * Membership retention efforts:
 1) free buddy ride 1 time per billing cycle
 2) exclusive member events
 3) personalized offers
 4) introduce loyalty program
-* Focus membership promotion during peak riding months (Summer)
-  
-**Promotions:**
+   
+** Promotions:**
 * Introduce flash promotions on weekdays and weekends (discunts, BOGO deals...) for casual riders during weekdays to encourage more usage.
 * Introduce ride duration packages- longer rides for cheaper
 * Introduce discounted memberships for students or for employees at partnered companies
