@@ -106,7 +106,7 @@ Visualizations were developed in Google Data Studio to observe differential tren
   
 
 ## Conclusions and Recommendations
-** Targeted Marketing:**
+#### **Targeted Marketing:**
 * Focus marketing efforts on converting casual riders into members by emphasizing the benefits of annual membership, such as cost savings and convenience for daily commuting.
 * Focus membership promotion during peak riding months (Summer)
 * Membership retention efforts:
@@ -115,7 +115,7 @@ Visualizations were developed in Google Data Studio to observe differential tren
 3) personalized offers
 4) introduce loyalty program
    
-** Promotions:**
+####  **Promotions:** 
 * Introduce flash promotions on weekdays and weekends (discunts, BOGO deals...) for casual riders during weekdays to encourage more usage.
 * Introduce ride duration packages- longer rides for cheaper
 * Introduce discounted memberships for students or for employees at partnered companies
