@@ -90,13 +90,19 @@ Visualizations were developed in Google Data Studio to observe differential tren
 ### Hourly distribution of number of rides
 ![Hourly](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/1f0fa050-75f8-4467-84de-7c5be3bb08d6)
 #### **Insights**
-* 
+* Members tend to utilize bikes between the hours 6-8 and 16-18
+* Casual rider count increased notably throughout the day, then showed a steady decline around hour 18.
+* Members may predominantly use bikes for commuting to and from work on weekdays
+* Casul riders utilize bikes frequently throughout the day
+
 
 
 ### Monthly distribution of number of rides 
 ![Monthly](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/837a2011-6ec9-4da3-b54f-5366d7d49527)
 #### **Insights**
-*  
+* Number of casual riders is approximately normal- showing peak number of riders in July
+* Number of member riders is very roughly normal- yet showing peak number of riders in August, followed by July then June
+  
 
 
 
