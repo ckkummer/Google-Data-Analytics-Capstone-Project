@@ -81,7 +81,7 @@ Visualizations were developed in Google Data Studio to observe differential tren
   
 
 ### Weekly distribution of average ride duration
-![# Rider _ Wk day bar (2)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/a5bcceb0-6569-480a-81cf-6fab83a6e0c2)
+![# Rider _ Wk day bar (7)](https://github.com/ckkummer/Google-Data-Analytics-Capstone-Project/assets/114955006/2f596834-35d9-49e8-8164-992cf8b55749)
 #### **Insights**
 * Casual riders typically ride approximately 2 times as long as members ride
 * Both causal and member riders engagge in longer rides on the weekend
